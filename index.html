@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  <title>Document</title>
+  <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js@3.4.5/aframe/build/aframe-ar.min.js"></script>
+</head>
+
+<body style='margin : 0px; overflow: hidden;'>
+ <a-scene embedded arjs>
+
+  <a-assets>
+    <img id="campo" src="./img/campo.jpg">
+    <a-asset-item id="vinicius" src="./glb/vinicius.glb"></a-asset-item>
+    <a-asset-item id="casemiro" src="./glb/casemiro.glb"></a-asset-item>
+    <a-asset-item id="neymar" src="./glb/neymar_dancing.glb"></a-asset-item>
+    <a-asset-item id="ederson" src="./glb/ederson.glb"></a-asset-item>
+    <a-asset-item id="marquinhos" src="./glb/marquinhos.glb"></a-asset-item>
+    <a-asset-item id="bruno" src="./glb/bruno.glb"></a-asset-item>
+  </a-assets>
+
+  <!-- CAMPO -->
+  <a-marker type="pattern" url="identificadores/pattern-arjs.patt">
+    <a-plane src="#campo" width="4" height="6" rotation="-90 0 0"></a-plane>
+  </a-marker>
+
+  <!-- Jogadores -->
+  <a-marker type="pattern" url="identificadores/pattern-letterA.patt">
+    <a-entity gltf-model="#vinicius" scale="1 1 1" position="0 0.1 0"></a-entity>
+  </a-marker>
+
+  <a-marker type="pattern" url="identificadores/pattern-letterB.patt">
+    <a-entity gltf-model="#casemiro" scale="1 1 1" position="0 0.1 0"></a-entity>
+  </a-marker>
+
+  <a-marker type="pattern" url="identificadores/pattern-letterC.patt">
+    <a-entity gltf-model="#neymar" scale="1 1 1" position="0 0.1 0"></a-entity>
+  </a-marker>
+
+  <a-marker type="pattern" url="identificadores/pattern-letterD.patt">
+    <a-entity gltf-model="#ederson" scale="1 1 1" position="0 0.1 0"></a-entity>
+  </a-marker>
+
+  <a-marker type="pattern" url="identificadores/pattern-letterF.patt">
+    <a-entity gltf-model="#marquinhos" scale="1 1 1" position="0 0.1 0"></a-entity>
+  </a-marker>
+
+  <a-marker type="pattern" url="identificadores/pattern-letterG.patt">
+    <a-entity gltf-model="#bruno" scale="1 1 1" position="0 0.1 0"></a-entity>
+  </a-marker>
+
+  <a-entity camera></a-entity>
+
+</a-scene>
+
+</body>
+
+</html>
